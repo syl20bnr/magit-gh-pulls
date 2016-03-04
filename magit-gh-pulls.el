@@ -393,7 +393,7 @@ option, or inferred from remotes."
     (unfetched-pull
      (let* ((req (magit-gh-section-req-data))
             (head (oref req :head)))
-       (magit-run-git "fetch" (oref (oref head :repo) :ssh-url)
+       (magit-run-git "fetch" (oref (oref head :repo) :git-url)
                       (oref head :ref))))
     (pull nil)
     (invalid-pull
